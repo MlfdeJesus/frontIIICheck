@@ -15,7 +15,12 @@
   font-weight: 700;
 }
 
-.btnStyle{
+.btnStyle {
   width: 3rem;
+  height: 3rem;
+}
+
+btnLogout{
+  width: 6rem;
   height: 3rem;
 }

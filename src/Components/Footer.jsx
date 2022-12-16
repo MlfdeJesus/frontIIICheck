@@ -1,9 +1,17 @@
 import styles from "./Footer.module.css";
+import { useContext } from "react";
+import { NavBarContext } from "./NavBarContext";
+
+
+
 
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo(0, 0)
   }
+
+
+  const { contextIsLight } = useContext(NavBarContext);
   return (
     <footer>
       <div className={styles.footerWrapper}>

@@ -1,4 +1,4 @@
-import DetailCard from "../Components/DetailCard";
+import DetailCard from "../DetailCard";
 
 const Detail = () => {
   return (

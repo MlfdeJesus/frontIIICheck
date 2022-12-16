@@ -1,22 +1,26 @@
-
-import { Outlet } from "react-router-dom";
-import Footer from "./Components/Footer";
-import Navbar from "./Components/Navbar";
+import AppRoutes from "./Routes/Routes";
+import { NavBarContext } from "./Components/contexts/NavBarContext";
+import { useContext, useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    alert(process.env.REACT_APP_TOKEN);
+  }, []);
+
+  const { contextIsLight } = useContext(NavBarContext);
+
   return (
     <>
       {/* //Na linha seguinte deverá ser feito um teste se a aplicação
         // está em dark mode e deverá utilizar a classe dark ou light */}
-      <div className={`app light}`}>
-        <Navbar />
-        <main>
-          <Outlet />
-        </main>
-        <Footer />
-      </div>
-    </>
-  );
-}
-
-export default App;
+       
+        <div className={contextIsLight ? `app light` : `app dark`}>
+          Wesley Bruno Barbosa Silva
+          <AppRoutes />
+        </div>
+      </>
+    );
+  }
+  
+  export default App;
+  
